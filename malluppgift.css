@@ -1,0 +1,1903 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Barlow:600|Handlee|Quicksand:400,500');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url("https://use.typekit.net/mlc6toq.css");
+
+
+/* NOLLSTÄLLER */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+    text-decoration: none;
+}
+
+
+
+/* START KOD */
+html {
+	font-size: 62.5%; 
+	height: 100%;
+}
+
+body {
+	background-color: rgba(53,67,90, 0.05);
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Libre Baskerville', 'georgia', serif;
+	line-height: 1.6;
+}
+
+h1 {
+	font-size: 2.8rem;
+}
+
+h2 {
+	/* Minskade line-height och ökade padding pga för mycket glapp mellan
+	överskriftens rader annars när dom hamnar under varandra */
+	font-size: 2rem;
+	line-height: 1.4;
+	padding-bottom: 0.8rem;
+}
+
+h3 {
+	font-size: 1.9rem;
+	margin-top: 1rem;
+	line-height: 1.4;
+	padding-bottom: 0.6rem;
+}
+
+h4 {
+	font-size: 1.5rem;
+	line-height: 1.3;
+	font-weight: 600;
+	padding-bottom: 0.8rem;	
+}
+
+h5 {
+	font-size: 1.3rem;
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	padding-right: 1rem;
+}
+
+h6 {
+	font-size: 1.4rem;
+}
+
+p {
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	font-size: 1.6rem;
+	line-height: 1.5;
+	color: #2f2c2c;
+	padding-bottom: 1.5rem;
+}
+
+
+/* LISTOR */
+ul li {
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	font-size: 1.5rem;
+	line-height: 1.8rem;
+}
+
+article ul {
+	border-left: 0.3rem solid hsla(217, 25.9%, 28%, 0.9);
+	margin-left: 2rem;
+	padding-left: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+ol {
+	list-style-type: decimal;
+	list-style-position: inside;
+	background-color: rgba(53,67,90, 0.08);
+	border-radius: 0.5rem;
+	padding: 2rem;
+	display: inline-block;
+}
+
+ol li {
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	font-size: 1.5rem;
+	line-height: 1.8;
+}
+
+/* mellanrum mellan listorna */
+.leftSideOrderedList ol {
+	margin-bottom: 2rem;
+}
+
+/* inget nummer på överskrifterna */
+.leftSideOrderedList ol li:first-child {
+	list-style-type: none;
+}
+
+.rightSideOrderedList ol li:first-child {
+	list-style-type: none;
+}
+
+dl {
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-top: 0.5rem;
+	margin-bottom: 2.5rem;
+	padding-right: 1rem;
+}
+
+dt {
+	float: left;
+	width: 10rem;
+	margin-left: 2rem;
+}
+
+dd {
+	margin-left: 14rem;
+}
+
+
+/* LÄNKAR */
+a {
+	color: #e75216;
+}
+
+a:hover {
+	color: orange;
+	text-decoration: underline;
+}
+
+
+/* ÅTERANVÄNDBARA STÖRRE WRAPPERS */
+article {
+	border-bottom: 2.4rem solid orangered;
+	padding: 1.5rem 0 1rem 0;
+}
+
+article:first-child {
+	padding-top: 0;
+}
+
+article:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+blockquote {
+	padding: 1.5rem 2rem 0 2rem;
+	margin: 1.5rem 0;
+	background-color: rgba(53,67,90, 0.08);
+	border-radius: 0.5rem;
+}
+
+.smallerQuote {
+	padding: 1.5rem 2rem 0 2rem;
+	margin: 1rem;
+	background-color: rgba(53,67,90, 0.08);
+	border-radius: 0.5rem;
+	font-style: italic;
+}
+
+/* avskiljer citatet från den som citerats */
+.smallerQuote p:last-child {
+	font-style: normal;
+}
+
+#container {
+	min-width: 205px;
+}
+
+/* Samlar innehållet på startsidan */
+#wrapperHomepage {
+	padding: 2.5rem 4rem;
+	border-top: 2.4rem solid orangered;
+	border-bottom: 2.4rem solid orangered;
+}
+
+/* Samlar ihop innehållet i helhet på sidorna */
+.wrapper {
+	margin: 2.5rem 6rem;
+}
+
+/* samlar ihop mindre innehåll */
+.smallWrapper {
+	margin: 0;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Ger bakgrundsfärg till utvalda delar */
+.iHaveBackgroundColor {
+	background-color: rgba(53,67,90, 0.08);
+	padding: 1.5rem;
+	margin: 1.5rem 0;
+	border-radius: 0.5rem;
+	display: inline-block;
+}
+
+.iHaveBackgroundColor li {
+	padding-bottom: 0.4rem;
+}
+
+/* centrerar det som finns inuti */
+.getContentCentered {
+	text-align: center;
+}
+
+/* låter texten flyta till vänster runt bilder */
+.floatingText {
+	float: left;
+}
+
+/* låter rangordnade listorna ligga under varandra */
+.leftSideOrderedList {
+	width: 100%;
+	float: left;
+	margin: 1.5rem 0 0 0;
+}
+
+.rightSideOrderedList {
+	width: 100%;
+	float: left;
+	margin: 0 0 1.5rem 0;
+}
+
+/* UNDER ARTIKLARNA */
+.author h6 {
+	font-style: italic;
+	margin-top: 2.5rem;
+}
+
+.date h6 {
+	font-size: 1.2rem;
+}
+
+.field h6 {
+	font-weight: 600;
+}
+
+
+/* ÖVRIGT SOM ÅTERANVÄNDS */
+/* Rensar efter floats */
+.clear {
+    clear: both;
+}
+
+/* Ger mellanrum mellan diverse textstycken */
+.separator {
+	height: 3rem;
+}
+
+/* ger mindre mellanrum med ett smalt streck */
+.smallSeparator {
+	height: 0.1rem;
+	background-color: hsla(217, 25.9%, 28%, 0.9);
+	margin: 0.5rem 0 1.7rem 0;
+}
+
+
+/* SIDANS ÖVRE DEL */
+header {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+	background-color: #35435a;
+	height: 100px;
+	position: relative;
+	top: 0px;
+}
+
+#logo {
+	height: 80px;
+	margin-right: 2px;
+}
+
+
+/* MENY FÖR MINDRE SKÄRMAR */
+#burgerImage {
+	margin-left: auto;
+	padding-right: 5%;
+	height: 30px;
+	cursor: pointer; 
+}
+
+.toggleNavigation ul {
+	display: block;
+	overflow: hidden;
+	list-style: none;
+	background: #dbf0fd;
+	text-transform: uppercase;
+	width: 100%;
+	height: 0;
+}
+	
+/* visar menyvalen med hjälp av lite JavaScript */
+.toggleNavigation ul.open {
+	height: auto;
+}
+
+/*
+#flyingDragon.open {
+    height: 0;
+}*/
+	
+.toggleNavigation ul li {
+	float: none;
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	text-align: right;
+	font-size: 1.7rem;
+	/* lägger den utfällda menyn precis ovanför den orangea bordern */
+	line-height: 49px;
+}
+	
+.toggleNavigation a:link, .toggleNavigation a:visited, .toggleNavigation a:hover {
+	display: block;
+	border-bottom: 0.1em solid #1a74b0;
+	color: #1a74b0;
+	padding-right: 2rem;
+	text-decoration: none;
+}
+
+
+/* MENY FÖR STÖRRE SKÄRMAR */	
+#desktopNav {
+	margin-left: auto;
+}
+
+#desktopNav ul {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+#desktopNav ul li a {
+	font-family: 'Barlow', 'Trebuchet MS', sans-serif;
+	font-size: 2rem;
+	font-weight: 600;
+	/* Samma vita ton som drakens tänder */
+	color: #f7f5e8;
+	padding-right: 4rem;
+}
+
+ #desktopNav ul li a:hover {
+	color: orange;
+	text-decoration: none;
+}
+
+
+/* MITTENDELEN AV SIDAN */
+/* slogan på startsidan */
+#pitch {
+	text-align: center;
+	padding: 1rem 0rem 3.5rem 0rem;
+}
+
+#pitch p {
+	font-family: 'Handlee', cursive;
+	font-size: 2rem;
+	white-space: nowrap;
+	padding-bottom: 0;
+}
+
+#pitchLargeScreen {
+	text-align: left;
+	padding: 1rem 0rem 3.5rem 0rem;
+}
+
+#pitchLargeScreen p {
+	font-family: 'Handlee', cursive;
+	font-size: 3.2rem;
+	white-space: nowrap;
+	padding-bottom: 0;
+}
+
+/* introduktionstexten på startsidan */
+#textrutaStartsidan {
+	padding-bottom: 2.5rem;
+}
+
+#textrutaStartsidan a {
+	font-size: 1.4rem;
+}
+
+/* samlar ihop personalbilden och kontaktinfo */
+#aboutUs {
+	width: 90%;
+	margin: auto;
+	margin-bottom: 3rem;
+}
+
+
+/* FOOTER */
+#footerWrapper {
+	background-color: #35435a;
+	/* lägger färgen framför "tillbaka-till-toppen"-pilen */
+	z-index: 2;
+	position: relative;
+}
+
+#footer {
+	display: flex;
+	flex-flow: row wrap;
+	margin-bottom: 0;
+	padding: 2rem;
+	color: #57a2d9;
+}
+
+/* flyttar denna del till höger */
+#footerRight {
+	margin-left: auto;
+	text-align: right;
+}
+
+/* förminskar copyright-texten */
+#footerRight ul li:first-child {
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+#footer ul li {
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	font-weight: 600;
+	font-size: 1.6rem;
+	padding: 0.25rem;
+}
+
+#footer ul li a {
+	/* orange text mot den blå bakgrunden syns inte bra, vit text var inte lika 
+	tydligt att den är klickbar när den inte ligger i menyn (som högst upp
+	på sidan) och ljusblå text med orange understrukning blev plottrigt och
+	fortfarande otydligt för länk. Denna lösning var den bästa jag kom på 
+	utan att plocka in fler färger */
+	color: #f7f5e8;
+	background-color: orangered;
+	padding: 0.5rem;
+	border: 1px solid white;
+	border-radius: 0.5rem;
+	font-weight: 400;
+	font-size: 1.4rem;
+}
+
+
+/* FORMULÄR */
+form {
+	background-color: rgba(53,67,90, 0.08);
+	padding: 2rem 4rem;
+	margin: 0;
+	border-radius: 0.5rem;
+}
+
+input, label, select, textarea {
+	font-family: 'Quicksand', 'Verdana', sans-serif;
+	font-size: 1.3rem;
+	color: #2f2c2c;
+}
+
+form p {
+	padding-bottom: 0.8rem;
+	line-height: 1.3;
+}
+
+label {
+	line-height: 1.5;
+	padding-bottom: 1.5rem;
+}
+
+/* För Chrome: ger bättre padding samt tar bort det blå från pilen */
+select {
+	height: calc(4rem);
+	text-indent: 0.5rem;
+	margin-top: 0.5rem;
+	/* Gör boxen jämnlång med dom under */
+	width: 103%;
+}
+
+textarea {
+	border: 1px solid hsla(217, 25.9%, 28%, 0.6);
+	border-radius: 0.5rem;
+	width: 95%;
+	height: 5rem;
+	box-shadow: 2px 3px 5px darkgrey;
+}
+
+input[type="text"] {
+	width: 100%;
+	height: 3.5rem;
+	border-radius: 0.5rem;
+	border: none;
+	padding-left: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+input[type="checkbox"] {
+	box-shadow: 1px 2px 2px darkgrey;
+}
+
+/* utseendet knapparna */
+input[type="submit"], input[type="reset"] {
+	padding: 1.5rem;
+	margin: 0 1rem 1rem 0;
+	color: white;
+	font-size: 1.8rem;
+	border-radius: 0.5rem;
+	box-shadow: 2px 3px 5px darkgrey;
+}
+
+input[type="submit"] {
+	background: orangered;
+}
+
+input[type="reset"] {
+	background: #35435a;
+}
+
+/* Staplar vid mindre skärmar och lägger bredvid på större */
+.floatLeft {
+	width: auto;
+	margin-right: 2rem;
+	float: left;
+}
+
+.floatRight {
+	width: auto;
+	float: left;
+}
+
+
+/* BILDMALLAR */
+/*  STANDARDBILDER */
+figure {
+	margin: 1rem 0 1.5rem 0;
+	position: relative;
+}
+
+figcaption {
+	background-color: hsla(217, 25.9%, 28%, 0.9);
+	position: absolute;
+	bottom: 0;
+	font-style: italic;
+	width: 100%;
+}
+
+figcaption p, .headerStanding p, .headerRectangle p, .headerSquare p {
+	padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+	font-size: 1.4rem;
+	text-align: right;
+	color: #f7f5e8;
+}
+
+.singleImage {
+	width: 100%;
+	position: relative;
+}
+
+
+/* STÅENDE BILDOMRÅDE/ BILD 25% AV SIDAN STÖRRE SKÄRMAR */
+.imageWrapperStanding {
+	margin: 2rem 0rem 2rem 0rem;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.imageStanding {
+	width: 40%;
+	float: left;
+}
+
+.headerStanding {
+	background-color: hsla(217, 25.9%, 28%, 0.9);
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-style: italic;
+	width: 60%;
+}
+
+.infoStanding {
+	text-align: right;
+	position: relative;
+	width: 55%;
+	padding-left: 45%;
+	padding-top: 6.5rem;
+}
+
+
+/* REKTANGULÄRT LIGGANDE BILDOMRÅDE */
+.imageWrapperRectangle {
+	margin: 2rem 0rem 2.5rem 0rem;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.pictureRectangle {
+	width: 100%;
+	display: block;
+	margin-bottom: -0.5rem;
+}
+
+.headerRectangle {
+	background-color: hsla(217, 25.9%, 28%, 0.9);
+	display: block;
+	font-style: italic;
+	padding: 0.5rem;
+	border-top: 0.7rem solid #35435a;
+}
+
+.infoRectangle {
+	text-align: right;
+	padding: 0.5rem 0 1rem 0;
+	display: block;
+}
+
+
+/* FYRKANTIGT BILDOMRÅDE */
+.imageWrapperSquare {
+	margin: 2rem 0rem 2rem 0rem;
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: 5px solid hsla(217, 25.9%, 28%, 0.9);
+	border-radius: 0.5rem;
+}
+
+.imageWrapperSquare h5 {
+	font-size: 1.4rem;
+}
+
+.imageSquare {
+	width: 48%;
+	float: left;
+	display: inline-block;
+	padding-top: 4rem;
+}
+
+.headerSquare {
+	background-color: hsla(217, 25.9%, 28%, 0.9);
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-style: italic;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.2rem;
+}
+
+.infoSquare {
+	text-align: right;
+	float: left;
+	display: inline-block;
+	width:48%;
+	padding-top: 5.5rem;
+}
+
+
+/* BILDER */
+/* Bild 25% av textlängden */
+#imageFourth { 
+	width: 100%;
+}
+
+/* liten avlång bild */
+#souvenirDragon {
+	width: 100%;
+}
+
+/* liten fyrkantig bild */
+#armband {
+	width: 100%;
+}
+
+/* personalfoto */
+#personalen {
+	box-shadow: 0 0 5px 4px darkgrey;
+	display: block;
+	margin: 1rem auto 2rem auto;
+	width: 100%;
+}
+
+/* pil till toppen av sidan */
+#goToTop {
+	width: 6rem;
+	position: fixed;
+	bottom: 1rem;
+	right: 3rem;
+	z-index: 1;
+	cursor: pointer;
+}
+
+/* bestämmer storleken på citattecken */
+.quoteImage { 
+	width: 4rem;
+}
+
+
+/* WIDGETS */
+/* en fyrkantsbild för mindre skärmar */
+#instagram {
+	width:200px;
+	height: 200px;
+	border: 7px solid white;
+	overflow: hidden;
+	display: block;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* två fyrkantsbilder för mellanstora skärmar */
+#instagram2slides {
+	width: 400px;
+	height: 200px;
+	border: 7px solid white;
+	overflow: hidden;
+	display: block;
+	margin: auto;
+	overflow: hidden;
+}
+
+/* bilderna till vänster för att fylla ut innehållet på större skärmar
+då textraderna behövde vara myckt kortare än skärmens storlek */
+#instagramLeft {
+	overflow: hidden;
+	display: none;
+}
+
+
+/* KARTA */
+#map {
+	width: 100%;
+	height: 300px;
+	border-bottom: 0.5rem solid hsla(217, 25.9%, 28%, 0.9);
+	margin-bottom: 1.5rem;
+}
+
+
+/* ANIMATIONER */
+/* under animationen */
+#banner {
+	overflow: hidden;
+	height: 250px;
+	width: 100%;
+	background-image: url(skogBigger.jpg);
+	background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+	position: relative;
+}
+
+#flyingDragon {
+    height: 75px;
+	position: relative;
+	-webkit-animation: fly 15s linear infinite;
+	-moz-animation: fly 15s linear infinite;
+    -ms-animation: fly 15s linear infinite;
+    animation: fly 15s linear infinite;
+}
+ 
+@-webkit-keyframes fly {
+	0%   {left:-500px; top:25px;}
+	10%  {left:-400px; top:25px;}
+	15%  {left:-350px; top:25px;} /* Kommer in i bild */
+	20%  {left:-300px; top:25px;}
+	25%  {left:-250px; top:50px;}
+	30%  {left:-200px; top:50px;}
+	35%  {left: -150px; top:25px;}
+	40%  {left:-100px; top:25px;}
+	45%  {left:-50px; top:50px;}
+	50%  {left:0px; top:50px;}
+	55%  {left:50px; top:25px;}
+	60%  {left:100px; top:25px;}
+	65%  {left:150px; top:50px;}
+	70%  {left:200px; top:50px;}
+	75%  {left:250px; top:25px;}
+	80%  {left:300px; top:25px;}
+	85%  {left:350px; top:50px;}
+	90%  {left:400px; top:50px;}
+    100% {left:500px; top:25px;}
+}
+  
+@keyframes fly {
+	0%   {left:-500px; top:25px;}
+	10%  {left:-400px; top:25px;}
+	15%  {left:-350px; top:25px;} /* Kommer in i bild */
+	20%  {left:-300px; top:25px;}
+	25%  {left:-250px; top:50px;}
+	30%  {left:-200px; top:50px;}
+	35%  {left: -150px; top:25px;}
+	40%  {left:-100px; top:25px;}
+	45%  {left:-50px; top:50px;}
+	50%  {left:0px; top:50px;}
+	55%  {left:50px; top:25px;}
+	60%  {left:100px; top:25px;}
+	65%  {left:150px; top:50px;}
+	70%  {left:200px; top:50px;}
+	75%  {left:250px; top:25px;}
+	80%  {left:300px; top:25px;}
+	85%  {left:350px; top:50px;}
+	90%  {left:400px; top:50px;}
+    100% {left:500px; top:25px;}
+}
+
+
+	@media screen and (min-width:1281px) {
+
+		/* LISTOR */
+		.leftSideOrderedList ol {
+			margin-bottom: 0;
+		}
+	
+
+		/* ÅTERANVÄNDBARA STÖRRE WRAPPERS */
+		#wrapperHomepage {
+			padding: 2.5rem 18rem;
+		}
+
+		.wrapper {
+			padding: 2.5rem 0;
+			width: 500px;
+			margin: auto;
+		}
+
+		/* SIDANS ÖVRE DEL */
+		header {
+			background-color: hsla(217, 25.9%, 28%, 0.9);
+			padding: 1rem 2rem 1rem 0rem;
+		}
+
+
+		/* MENY FÖR MINDRE SKÄRMAR */
+		#burgerImage {
+			display: none;
+		}
+
+		.toggleNavigation {
+			display: none;
+		}
+
+
+		/* MENY FÖR STÖRRE SKÄRMAR */	
+		#desktopNav ul li {
+			padding-right: 5rem;
+		}
+   
+
+		/* MITTENDELEN AV SIDAN */
+		#pitch {
+			display: none;
+		}
+
+		/* samlar delar av startsidans innehåll till vänster för större skärmar */
+		#leftSide {
+			display: inline-block;
+			width: 260px;
+			padding-top: 2.5rem;
+			float: left;
+		}
+
+		#rightSide {
+			display: inline-block;
+			width: 50%;
+			padding-top: 12.5rem;
+			float: left;
+		}
+
+		.leftSideOrderedList {
+			width: auto;
+			margin: 1.5rem 2rem 1.5rem 0;
+		}
+	
+		/* lägger listorna bredvid varandra på större skärmar */
+		.rightSideOrderedList {
+			width: auto;
+			float: right;
+			margin: 1.5rem 0;
+		}
+
+
+		/* FOOTER */
+		#footer {
+			padding: 2.5rem 0rem 2.5rem 0;
+			text-align: center;
+			margin: auto;
+			display: block;
+		}
+
+		#footerLeft {
+			text-align: right;
+			display: inline-block;
+			margin-right: 2rem;
+		}
+
+		#footerRight {
+			padding-left: 2rem;
+			text-align: left;
+			border-left: 1px solid #57a2d9;
+			display: inline-block;
+		}
+
+		
+		/* BILDMALLAR */
+		/* STÅENDE BILDOMRÅDE/ BILD 25% AV SIDAN STÖRRE SKÄRMAR */
+		.imageWrapperStanding {
+			width: 50%;
+			float: right;
+			margin: 0.8rem 0 1.5rem 2rem;
+		}
+
+		.imageStanding {
+			width: 50%;
+		}
+	
+		.infoStanding {
+			width: 45%;
+			padding-left: 55%;
+		}
+	
+		.headerStanding {
+			width: 50%;
+		}
+
+		/* REKTANGULÄRT LIGGANDE BILDOMRÅDE */
+		.imageWrapperRectangle {
+			width: 100%;
+		}
+
+		.pictureRectangle {
+			width: 50%;
+			float: left;
+		}
+
+		.headerRectangle {
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			right: 0;
+			float: left;
+			width: 50%;
+			border: none;
+		}
+
+		.infoRectangle {
+			text-align: right;
+			position: relative;
+			width: 45%;
+			margin-left: 55%;
+			padding-top: 5rem;	
+		}
+
+		/* FYRKANTIGT BILDOMRÅDE */
+		.imageWrapperSquare {
+			width: 25rem;
+		}
+
+
+		/* WIDGETS */
+		#instagram {
+			display: none;
+		}
+
+		#instagram2slides {
+			display: none;
+		}
+
+		#instagramLeft {
+			overflow: visible;
+			width: 200px;
+			height: 420px;
+			display: block;
+			border: 7px solid white;
+			margin-top: 1rem;
+		}
+
+
+		/* ANIMATIONS */
+		#banner {
+			height: 420px;
+		}
+
+		#flyingDragon {
+			-webkit-animation: fly 22s linear infinite;
+			-moz-animation: fly 22s linear infinite;
+			-ms-animation: fly 22s linear infinite;
+			animation: fly 22s linear infinite;
+		}
+
+
+			@-webkit-keyframes fly {
+				0%   {left:-450px; top:70px;}
+				5%   {left:-350px; top:70px;} /* Kommer in i bild */
+				9%   {left:-282px; top:90px;}
+				13%  {left:-214px; top:90px;} 
+				17%  {left:-146px; top:70px;}
+				21%  {left:-78px; top:70px;}
+				25%  {left:-10px; top:90px;}
+				29%  {left: 58px; top:90px;}
+				33%  {left:126px; top:70px;}
+				37%  {left:194px; top:70px;}
+				41%  {left:262px; top:90px;}
+				45%  {left:330px; top:90px;}
+				49%  {left:398px; top:70px;}
+				53%  {left:466px; top:70px;}
+				57%  {left:534px; top:90px;}
+				61%  {left:602px; top:90px;}
+				65%  {left:670px; top:70px;}
+				69%  {left:738px; top:70px;}
+				73%  {left:806px; top:40px;}
+				77%  {left:874px; top:40px;}
+				81%  {left:942px; top:40px;}
+				85%  {left:1010px; top:-30px;}
+				89%  {left:1078px; top:-30px;}
+				93%  {left:1155px; top:-100px;}
+				97%  {left:1232px; top:-100px;}
+				100% {left:1300px; top:-200px;}
+			}
+	  
+			@keyframes fly {
+				0%   {left:-450px; top:70px;}
+				5%   {left:-350px; top:70px;} /* Kommer in i bild */
+				9%   {left:-282px; top:90px;}
+				13%  {left:-214px; top:90px;} 
+				17%  {left:-146px; top:70px;}
+				21%  {left:-78px; top:70px;}
+				25%  {left:-10px; top:90px;}
+				29%  {left: 58px; top:90px;}
+				33%  {left:126px; top:70px;}
+				37%  {left:194px; top:70px;}
+				41%  {left:262px; top:90px;}
+				45%  {left:330px; top:90px;}
+				49%  {left:398px; top:70px;}
+				53%  {left:466px; top:70px;}
+				57%  {left:534px; top:90px;}
+				61%  {left:602px; top:90px;}
+				65%  {left:670px; top:70px;}
+				69%  {left:738px; top:70px;}
+				73%  {left:806px; top:40px;}
+				77%  {left:874px; top:40px;}
+				81%  {left:942px; top:40px;}
+				85%  {left:1010px; top:-30px;}
+				89%  {left:1078px; top:-30px;}
+				93%  {left:1155px; top:-100px;}
+				97%  {left:1232px; top:-100px;}
+				100% {left:1300px; top:-200px;}
+			}	
+  	}
+
+    @media screen and (min-width:961px) and (max-width: 1280px) {
+		
+		/* LISTOR */
+		.leftSideOrderedList ol {
+			margin-bottom: 0;
+		}
+
+
+		/* ÅTERANVÄNDBARA STÖRRE WRAPPERS */
+		#wrapperHomepage {
+			padding: 2.5rem 15rem;
+		}
+
+		.wrapper {
+			padding: 2.5rem 0;
+			width: 500px;
+			margin: auto;
+		}
+
+
+		/* SIDANS ÖVRE DEL */
+		header {
+			background-color: hsla(217, 25.9%, 28%, 0.9);
+			padding: 1rem 2rem 1rem 0rem;
+		}
+
+
+		/* MENY FÖR MINDRE SKÄRMAR */
+		#burgerImage {
+			display: none;
+		}
+
+		.toggleNavigation {
+			display: none;
+		}
+
+
+		/* MITTENDELEN AV SIDAN */
+		#pitch {
+			display: none;
+		}
+
+		#leftSide {
+			display: inline-block;
+			width: 250px;
+			padding-top: 2rem;
+			float: left;
+		}
+
+		#rightSide {
+			display: inline-block;
+			width: 55%;
+			padding-top: 12rem;
+			float: left;
+		}
+
+		.leftSideOrderedList {
+			width: auto;
+			margin: 1.5rem 2rem 1.5rem 0;
+		}
+		
+		.rightSideOrderedList {
+			width: auto;
+			float: right;
+			margin: 1.5rem 0;
+		}
+
+
+		/* FOOTER */
+		#footer {
+			padding: 2.5rem 0rem 2.5rem 0;
+			text-align: center;
+			margin: auto;
+			display: block;
+		}
+
+		#footerLeft {
+			text-align: right;
+			display: inline-block;
+			margin-right: 2rem;
+		}
+
+		#footerRight {
+			padding-left: 2rem;
+			text-align: left;
+			border-left: 1px solid #57a2d9;
+			display: inline-block;
+		}
+
+
+		/* BILDMALLAR */
+		/* STÅENDE BILDOMRÅDE/ BILD 25% AV SIDAN STÖRRE SKÄRMAR */
+		.imageWrapperStanding {
+			width: 50%;
+			float: right;
+			margin: 0.8rem 0 1.5rem 2rem;
+		}
+
+		.imageStanding {
+			width: 50%;
+		}
+		
+		.infoStanding {
+			width: 45%;
+			padding-left: 55%;
+		}
+		
+		.headerStanding {
+			width: 50%;
+		}
+
+		/* REKTANGULÄRT LIGGANDE BILDOMRÅDE */
+		.imageWrapperRectangle {
+			width: 100%;
+		}
+
+		.pictureRectangle {
+			width: 50%;
+			float: left;
+		}
+
+		.headerRectangle {
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			right: 0;
+			float: left;
+			width: 50%;
+			border: none;
+		}
+
+		.infoRectangle {
+			text-align: right;
+			position: relative;
+			width: 45%;
+			margin-left: 55%;
+			padding-top: 5rem;	
+		}
+
+		/* FYRKANTIGT BILDOMRÅDE */
+		.imageWrapperSquare {
+			width: 25rem;
+		}
+
+
+		/* WIDGETS */
+		#instagram {
+			display: none;
+		}
+
+		#instagram2slides {
+			display: none;
+		}
+
+		#instagramLeft {
+			overflow: visible;
+			width: 200px;
+			height: 420px;
+			display: block;
+			border: 7px solid white;
+			margin-top: 1rem;
+		}
+
+
+		/* ANIMATIONS */
+		#banner {
+			height: 400px;
+		}
+
+		#flyingDragon {
+			-webkit-animation: fly 22s linear infinite;
+			-moz-animation: fly 22s linear infinite;
+			-ms-animation: fly 22s linear infinite;
+			animation: fly 22s linear infinite;
+		}
+
+		@-webkit-keyframes fly {
+			0%   {left:-450px; top:70px;}
+			5%   {left:-350px; top:70px;} /* Kommer in i bild */
+			9%   {left:-282px; top:90px;}
+			13%  {left:-214px; top:90px;} 
+			17%  {left:-146px; top:70px;}
+			21%  {left:-78px; top:70px;}
+			25%  {left:-10px; top:90px;}
+			29%  {left: 58px; top:90px;}
+			33%  {left:126px; top:70px;}
+			37%  {left:194px; top:70px;}
+			41%  {left:262px; top:90px;}
+			45%  {left:330px; top:90px;}
+			49%  {left:398px; top:70px;}
+			53%  {left:466px; top:70px;}
+			57%  {left:534px; top:90px;}
+			61%  {left:602px; top:90px;}
+			65%  {left:670px; top:70px;}
+			69%  {left:738px; top:70px;}
+			73%  {left:806px; top:90px;}
+			77%  {left:874px; top:90px;}
+			81%  {left:942px; top:70px;}
+			85%  {left:1010px; top:70px;}
+			89%  {left:1078px; top:90px;}
+			93%  {left:1146px; top:90px;}
+			97%  {left:1214px; top:70px;}
+			100% {left:1280px; top:70px;}
+		}
+		  
+		@keyframes fly {
+			0%   {left:-450px; top:70px;}
+			5%   {left:-350px; top:70px;} /* Kommer in i bild */
+			9%   {left:-282px; top:90px;}
+			13%  {left:-214px; top:90px;} 
+			17%  {left:-146px; top:70px;}
+			21%  {left:-78px; top:70px;}
+			25%  {left:-10px; top:90px;}
+			29%  {left: 58px; top:90px;}
+			33%  {left:126px; top:70px;}
+			37%  {left:194px; top:70px;}
+			41%  {left:262px; top:90px;}
+			45%  {left:330px; top:90px;}
+			49%  {left:398px; top:70px;}
+			53%  {left:466px; top:70px;}
+			57%  {left:534px; top:90px;}
+			61%  {left:602px; top:90px;}
+			65%  {left:670px; top:70px;}
+			69%  {left:738px; top:70px;}
+			73%  {left:806px; top:90px;}
+			77%  {left:874px; top:90px;}
+			81%  {left:942px; top:70px;}
+			85%  {left:1010px; top:70px;}
+			89%  {left:1078px; top:90px;}
+			93%  {left:1146px; top:90px;}
+			97%  {left:1214px; top:70px;}
+			100% {left:1280px; top:70px;}
+		}	
+    }
+    
+
+    @media screen and (min-width:751px) and (max-width: 960px) { 
+
+		/* LISTOR */
+		.leftSideOrderedList ol {
+			margin-bottom: 0;
+		}
+
+
+		/* ÅTERANVÄNDBARA STÖRRE WRAPPERS */
+		#wrapperHomepage {
+			padding: 2.5rem 15rem;
+		}
+
+		.wrapper {
+			padding: 2.5rem 0;
+			width: 500px;
+			margin: auto;
+		}
+
+
+		/* MENY FÖR MINDRE SKÄRMAR */
+		.toggleNavigation ul {
+			width: 40%;
+			margin-left: 60%;
+		}
+
+		/* drar ut menyn på hela sidorna där det inte finns passande bakgrund bakom */
+		.fullToggle ul {
+			width: 100%;
+			margin-left: 0%;
+		}
+
+		.toggleNavigation ul li {
+			line-height: 82px;
+		}
+		
+		.toggleNavigation a:link, .toggleNavigation a:visited, .toggleNavigation a:hover {
+			padding-right: 4rem;
+		}
+
+
+		/* MENY FÖR STÖRRE SKÄRMAR */	
+		#desktopNav {
+			display: none;
+		}
+
+
+		/* MITTENDELEN AV SIDAN */	
+		#pitch {
+			padding-top: 1.5rem;
+			padding-bottom: 5rem;
+		}
+
+		#pitch p {
+			font-size: 2.3rem;
+		}
+
+		#pitchLargeScreen {
+			display: none;
+		}
+
+		.leftSideOrderedList {
+			width: auto;
+			margin: 1.5rem 2rem 1.5rem 0;
+		}
+	
+		.rightSideOrderedList {
+			width: auto;
+			margin: 1.5rem 0;
+			float: right;
+		}
+		
+
+		/* FOOTER */
+		#footer {
+			padding: 2.5rem 0rem 2.5rem 0;
+			text-align: center;
+			margin: auto;
+			display: block;
+		}
+
+		#footerLeft {
+			text-align: right;
+			display: inline-block;
+			margin-right: 2rem;
+		}
+
+		#footerRight {
+			padding-left: 2rem;
+			text-align: left;
+			border-left: 1px solid #57a2d9;
+			display: inline-block;
+		}
+
+
+		/* BILDMALLAR */
+		/* STÅENDE BILDOMRÅDE/ BILD 25% AV SIDAN STÖRRE SKÄRMAR */
+		.imageWrapperStanding {
+			width: 50%;
+			float: right;
+			margin: 0.8rem 0 1.5rem 2rem;
+		}
+
+		.imageStanding {
+			width: 50%;
+		}
+		
+		.infoStanding {
+			width: 45%;
+			padding-left: 55%;
+		}
+		
+		.headerStanding {
+			width: 50%;
+		}
+		
+		
+		/* REKTANGULÄRT LIGGANDE BILDOMRÅDE */
+		.imageWrapperRectangle {
+			width: 100%;
+		}
+
+		.pictureRectangle {
+			width: 50%;
+			float: left;
+		}
+
+		.headerRectangle {
+			box-sizing: border-box;
+			position: absolute;
+			top: 0;
+			right: 0;
+			float: left;
+			width: 50%;
+			border: none;
+		}
+
+		.infoRectangle {
+			text-align: right;
+			position: relative;
+			width: 45%;
+			margin-left: 55%;
+			padding-top: 5rem;	
+		}
+
+		/* FYRKANTIGT BILDOMRÅDE */
+		.imageWrapperSquare {
+			width: 25rem;
+		}
+
+
+		/* WIDGETS */
+		#instagram {
+			display: none;
+		}
+
+
+		/* ANIMATIONER */
+		#banner {
+			height: 350px;
+		}
+
+		#flyingDragon {
+			-webkit-animation: fly 20s linear infinite;
+			-moz-animation: fly 20s linear infinite;
+			-ms-animation: fly 20s linear infinite;
+			animation: fly 20s linear infinite;
+		}
+
+			@-webkit-keyframes fly {
+				0%   {left:-450px; top:62px;}
+				5%   {left:-350px; top:62px;} /* Kommer in i bild */
+				9%   {left:-295px; top:85px;}
+				13%  {left:-240px; top:85px;} 
+				17%  {left:-185px; top:62px;}
+				21%  {left:-130px; top:62px;}
+				25%  {left:-75px; top:85px;}
+				29%  {left: -20px; top:85px;}
+				33%  {left:35px; top:62px;}
+				37%  {left:90px; top:62px;}
+				41%  {left:145px; top:85px;}
+				45%  {left:200px; top:85px;}
+				49%  {left:255px; top:62px;}
+				53%  {left:310px; top:62px;}
+				57%  {left:365px; top:85px;}
+				61%  {left:420px; top:85px;}
+				65%  {left:475px; top:62px;}
+				69%  {left:530px; top:62px;}
+				73%  {left:585px; top:85px;}
+				77%  {left:640px; top:85px;}
+				81%  {left:695px; top:62px;}
+				85%  {left:750px; top:62px;}
+				89%  {left:805px; top:85px;}
+				93%  {left:860px; top:85px;}
+				97%  {left:915px; top:62px;}
+				100% {left:960px; top:62px;}
+			}
+		  
+			@keyframes fly {
+				0%   {left:-450px; top:62px;}
+				5%   {left:-350px; top:62px;} /* Kommer in i bild */
+				9%   {left:-295px; top:85px;}
+				13%  {left:-240px; top:85px;} 
+				17%  {left:-185px; top:62px;}
+				21%  {left:-130px; top:62px;}
+				25%  {left:-75px; top:85px;}
+				29%  {left: -20px; top:85px;}
+				33%  {left:35px; top:62px;}
+				37%  {left:90px; top:62px;}
+				41%  {left:145px; top:85px;}
+				45%  {left:200px; top:85px;}
+				49%  {left:255px; top:62px;}
+				53%  {left:310px; top:62px;}
+				57%  {left:365px; top:85px;}
+				61%  {left:420px; top:85px;}
+				65%  {left:475px; top:62px;}
+				69%  {left:530px; top:62px;}
+				73%  {left:585px; top:85px;}
+				77%  {left:640px; top:85px;}
+				81%  {left:695px; top:62px;}
+				85%  {left:750px; top:62px;}
+				89%  {left:805px; top:85px;}
+				93%  {left:860px; top:85px;}
+				97%  {left:915px; top:62px;}
+				100% {left:960px; top:62px;}
+			}	
+    }
+   
+
+    @media screen and (min-width:500px) and (max-width:750px) { 
+
+		/* ÅTERANVÄNDBARA STÖRRE WRAPPERS */
+		#wrapperHomepage {
+			padding: 2.5rem 10rem;
+		}
+
+		.wrapper {
+			margin: 2.5rem 10rem;
+		}
+
+
+		/* MENY FÖR MINDRE SKÄRMAR */
+		.toggleNavigation ul li {
+			line-height: 65px;
+		}
+
+		.toggleNavigation a:link, .toggleNavigation a:visited, .toggleNavigation a:hover {
+			padding-right: 3rem;
+		}
+			
+
+		/* MENY FÖR STÖRRE SKÄRMAR */	
+		#desktopNav {
+			display: none;
+		}
+
+
+		/* MITTENDELEN AV SIDAN */
+		#pitch {
+			padding-bottom: 4rem;
+		}
+
+		#pitch p {
+			font-size: 2.2rem;
+		}
+		
+		#pitchLargeScreen {
+			display: none;
+		}
+
+
+		/* FOOTER */
+		#footer {
+			padding: 3rem 0rem 3rem 10rem;
+		}
+
+		#footerRight {
+			margin-left: 2.5rem;
+			padding-left: 2.5rem;
+			text-align: left;
+			border-left: 1px solid #57a2d9;
+		}
+
+
+		/* BILDMALLAR */
+		/* STÅENDE BILDOMRÅDE/ BILD 25% AV SIDAN STÖRRE SKÄRMAR */
+		.imageStanding {
+			width: 35%;
+		}
+
+		.headerStanding {
+			right: 20%;
+			width: 45%;
+		}
+
+		.infoStanding {
+			width: 35%;
+			padding-left: 45%;
+			padding-right: 20%;
+			padding-top: 7rem;
+		}			
+		
+		/* REKTANGULÄRT LIGGANDE BILDOMRÅDE */
+		.infoRectangle {
+			padding: 1rem 0 1rem 0;
+		}
+
+		/* FYRKANTIGT BILDOMRÅDE */
+		.imageWrapperSquare {
+			width: 300px;
+		}
+
+		
+		/* WIDGETS */
+		#instagram2slides {
+			display: none;
+		}
+
+		/* ANIMATIONER */
+		#banner {
+			height: 300px;
+		}
+
+		#flyingDragon {
+			-webkit-animation: fly 17s linear infinite;
+			-moz-animation: fly 17s linear infinite;
+			-ms-animation: fly 17s linear infinite;
+			animation: fly 17s linear infinite;
+		}
+
+			@-webkit-keyframes fly {
+				0%   {left:-450px; top:40px;}
+				10%  {left:-350px; top:40px;} /* Kommer in i bild */
+				15%  {left:-285px; top:65px;} 
+				20%  {left:-220px; top:65px;}
+				25%  {left:-155px; top:40px;}
+				30%  {left:-90px; top:40px;}
+				35%  {left: -25px; top:65px;}
+				40%  {left:40px; top:65px;}
+				45%  {left:105px; top:40px;}
+				50%  {left:170px; top:40px;}
+				55%  {left:235px; top:65px;}
+				60%  {left:300px; top:65px;}
+				65%  {left:365px; top:40px;}
+				70%  {left:430px; top:40px;}
+				75%  {left:495px; top:65px;}
+				80%  {left:560px; top:65px;}
+				85%  {left:625px; top:40px;}
+				90%  {left:690px; top:40px;}
+				100% {left:750px; top:65px;}
+			}
+		  
+			@keyframes fly {
+				0%   {left:-450px; top:40px;}
+				10%  {left:-350px; top:40px;} /* Kommer in i bild */
+				15%  {left:-285px; top:65px;} 
+				20%  {left:-220px; top:65px;}
+				25%  {left:-155px; top:40px;}
+				30%  {left:-90px; top:40px;}
+				35%  {left: -25px; top:65px;}
+				40%  {left:40px; top:65px;}
+				45%  {left:105px; top:40px;}
+				50%  {left:170px; top:40px;}
+				55%  {left:235px; top:65px;}
+				60%  {left:300px; top:65px;}
+				65%  {left:365px; top:40px;}
+				70%  {left:430px; top:40px;}
+				75%  {left:495px; top:65px;}
+				80%  {left:560px; top:65px;}
+				85%  {left:625px; top:40px;}
+				90%  {left:690px; top:40px;}
+				100% {left:750px; top:65px;}
+			}	
+	}
+	
+
+
+    @media screen and (min-width:341px) and (max-width:499px) { 
+		
+		/* MENY FÖR STÖRRE SKÄRMAR */	
+		#desktopNav {
+			display: none;
+		}
+
+		/* MITTENDELEN AV SIDAN */
+		#pitchLargeScreen {
+			display: none;
+		}
+
+		/* BILDER */
+		#goToTop {
+			display: none;
+		}
+
+		/* WIDGETS */
+		#instagram2slides {
+			display: none;
+		}
+    }
+
+
+    @media screen and (max-width:340px) { 
+		
+		h2 {
+			font-size: 2.2rem;
+			line-height: 1.4;
+			margin-bottom: 0.3rem;
+		}
+
+		h4 {
+			line-height: 1.5;
+		}
+
+		p {
+			line-height: 1.6;
+		}
+		
+
+		/* ÅTERANVÄNDBARA STÖRRE WRAPPERS */
+		.wrapper {
+			margin: 2.5rem 4rem;
+		}
+
+
+		/* SIDANS ÖVRE DEL */
+		header {
+			display: block;
+		}
+
+		#logo {
+			float: left;
+			padding-top: 1rem;
+		}
+		
+		#companyName {
+			margin-top: 150px;
+			background-color: rgba(255,69,0, 0.3);
+			border: 0.5rem solid black;
+			display: none;
+		}
+		
+
+		/* MENY FÖR MINDRE SKÄRMAR */
+		#burgerImage {
+			float: right;
+			padding-right: 5%;
+			padding-top: 3.5rem;			
+		}
+
+		.toggleNavigation ul li {
+			line-height: 39px;
+		}
+
+		.toggleNavigation a:link, .toggleNavigation a:visited, .toggleNavigation a:hover {
+			padding-right: 1.4rem;
+		}
+
+
+		/* MENY FÖR STÖRRE SKÄRMAR */	
+		#desktopNav {
+			display: none;
+		}
+
+
+		/* MITTENDELEN AV HEMSIDAN */
+		#pitch {
+			text-align: left;
+			padding-bottom: 2.5rem;
+		}
+
+		#pitch p {
+			white-space: normal;
+			line-height: 2.5;
+			padding-left: 0;
+		}
+
+		#pitchLargeScreen {
+			display: none;
+		}
+
+
+		/* FOOTER */
+		#footer {
+			display: block;
+		}
+		
+		#footerRight {
+			text-align: left;
+			padding-top: 0.8rem;
+		}
+		
+		#footer ul li {
+			font-family: 'Quicksand', 'Verdana', sans-serif;
+			font-weight: 600;
+			font-size: 1.5rem;
+			padding: 0.3rem;
+		}
+		
+		#footer ul li a {
+			font-size: 1.55rem;
+		}
+
+
+		/* FORMULÄR */
+		form {
+			padding: 2rem;
+		}
+
+		input[type="submit"], input[type="reset"] {
+			padding: 1rem;
+			font-size: 1.3rem;
+		}
+
+
+		/* BILDER */
+		#goToTop {
+			display: none;
+		}
+
+		/* BILDTEXTER */
+		figcaption p {
+			font-size: 1.2em;
+			white-space: nowrap;
+		}
+
+		/* BILDMALLAR */
+		/* STÅENDE BILDOMRÅDE/ BILD 25% AV SIDAN STÖRRE SKÄRMAR */
+		.imageInfo {
+			position: relative;
+		}
+
+
+		/* WIDGETS */
+		#instagram {
+			width:150px;
+			height: 150px;
+		}
+
+		#instagram2slides {
+			display: none;
+		}
+
+
+		/* ANIMATIONER */
+		#banner {
+			height: 220px;
+		}
+		
+		#flyingDragon {
+			content: url(companyName.png);
+			animation: none;
+			height: 40px;
+			background-color: rgba(51, 31, 24, 0.8);
+			padding: 5px 10px 5px 10px;
+			margin-top: 14%;
+			margin-left: 27%;
+		}
+    }

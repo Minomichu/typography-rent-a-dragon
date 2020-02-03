@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="miun.se" />
+    <title>Kontakta oss</title>
+    <link href="malluppgift.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <a href="index.html" ><img id="logo" src="blueMobile.png" alt="Loggan är en söt drake" /></a>
+            <a href="index.html" ><img id="companyName" src="companyName.png" alt="Företaget heter Drakia" /></a>
+            <img id="burgerImage" src="blueBurger.png" alt="Meny för mindre skärmar" />
+
+            <nav id="desktopNav">
+                <ul>
+                    <li><a href="index.html" title="hem">Hem</a></li>
+                    <li><a href="blog.html" title="drakbloggen">Drakbloggen</a></li>
+                    <li><a href="contact.html" title="kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <nav class="toggleNavigation fullToggle">
+            <ul>
+                <li><a href="index.html" title="hem">Hem</a></li>
+                <li><a href="blog.html" title="drakbloggen">Drakbloggen</a></li>
+                <li><a href="contact.html" title="kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <div id="map"></div>
+            
+            <div class="wrapper">
+                <div class="iHaveBackgroundColor">
+                    <h2>Om oss</h2>
+                    <p>Drakia grundades redan för hundratlas år sedan och en räng ader toch te. Geheälen 
+                    zoo met zee geslöten tusschen. Uitkeert in dikwijls op kolonist zandlaag gebracht 
+                    omgöving of ålgö. Vruchtbaar häd rijkdommen gewöonlijk beschikken dit getaxeerde. 
+                    Systemen en vermengd ik gelijken er of. Löt zij verdeeld bespåart bevreesd 
+                    britsche.</p>
+                </div>
+
+                <div id="aboutUs">
+                    <img id="personalen" src="helaPersonalstyrkan2018.png" 
+                    alt="Bild på färgglada drakar som ser snälla ut som jobbar hos Drakia" />
+                    <h3>Besöksadress</h3>
+                    <p>Drakia AB<br/>
+                    Drakvägen 7<br/>
+                    111 24 Drakberget</p>
+                </div>
+
+                <form>
+                    <h2>Kontakta oss</h2>
+                    <select id="anledning" name="anledning">
+                        <option value="Subject">Välj ämne:</option>
+                        <option value="Hyra drake">Jag vill hyra en drake</option>
+                        <option value="Jobbsökande drake">Jag är en drake som vill jobba hos er</option>
+                        <option value="Annat">Annat</option>
+                    </select>
+    
+                    <div class="separator"></div>
+
+                    <fieldset>
+                        <input type="text" placeholder="Mitt namn" id="namn" name="namn">
+                        <input type="text" placeholder="Min mailadress" id="epost" name="epost">
+                        <input type="text" placeholder="Mitt telefonnummer" id="telefon" name="telefon">
+                    </fieldset>
+
+                    <div class="smallSeparator"></div>
+    
+                    <p>Svara mig i första hand via:</p>
+                    <div class="floatLeft">
+                        <input type="radio" id="mailsvar" name="svar" value="Maila mig" checked>
+                        <label for="mailsvar">Mail</label>
+                    </div>
+                    <div class="floatRight">
+                        <input type="radio" id="telefonsvar" name="svar" value="Ring mig">
+                        <label for="telefonsvar">Telefon</label>
+                    </div>
+                    
+                    <div class="clear"></div>
+                    <div class="separator"></div>
+      
+                    <!-- gör att rutorna under inte kan tryckas upp och blandas med texten -->
+                    <div class="smallWrapper">
+                        <p>Medan jag väntar på svar vill jag att ni skickar mig 
+                        klistermärken på olika drakar i färgen/färgerna:</p>
+                    </div>
+                    <div class="floatLeft">
+                        <input type="checkbox" id ="blå" name="färg" value="Blått klistermärke">
+                        <label for="blå">Blå</label><br/>
+                        <input type="checkbox" id ="rosa" name="färg" value="Rosa klistermärke">
+                        <label for="rosa">Rosa</label><br/>
+                        <input type="checkbox" id ="grön" name="färg" value="Grönt klistermärke">
+                        <label for="grön">Grön</label><br/>
+                    </div>
+                    <div class="floatRight">
+                        <input type="checkbox" id ="gul" name="färg" value="Gult klistermärke">
+                        <label for="gul">Gul</label><br/>
+                        <input type="checkbox" id ="orange" name="färg" value="Orange klistermärke">
+                        <label for="orange">Orange</label><br/>
+                        <input type="checkbox" id ="regnbåge" name="färg" value="Regnbågsklistermärke">
+                        <label for="regnbåge">Regnbåge</label><br/>
+                    </div>
+    
+                    <div class="clear"></div>
+                    <div class="separator"></div>
+                    
+                    <p>Extra meddelande:</p>
+                    <textarea id="meddelande" name="meddelande" ></textarea>
+                    
+                    <div class="separator"></div>
+                    
+                    <input type="submit" name="skicka" value="Skicka">
+                    <input type="reset" name="reset" value="Radera och börja om">
+                
+                </form>
+            </div> <!-- end wrapper -->
+        </main>
+
+        <div id="footerWrapper">
+            <div id="footer">
+                <div id="footerLeft">
+                    <ul>
+                        <li>Telefon:</li>
+                        <li>08 - 650 08 08</li>
+                    </ul>
+                </div>
+                <div id="footerRight">
+                    <ul>
+                        <li>© Drakia 2018</li>
+                        <li><a href="mailto:info@drakia.se">info@drakia.se</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    </div> <!-- end container -->
+
+    <script src="https://snapwidget.com/js/snapwidget.js"></script> 
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="malluppgift.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA0FUoWc1yjAh3krt9g2AnCUIP7NtbwxHs&callback=initMap"></script>
+
+    </body>
+</html>
